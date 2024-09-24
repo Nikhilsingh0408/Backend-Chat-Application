@@ -13,8 +13,9 @@ const app = express();
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
+const BASE_URL_FRONTEND = 'https://frontend-chat-application-nine.vercel.app/';
 const corsOptions = {
-    origin:'http://localhost:5173',
+    origin:BASE_URL_FRONTEND,
     credentials:true
 }
 app.use(cors(corsOptions));
